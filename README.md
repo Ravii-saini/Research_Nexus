@@ -17,7 +17,7 @@
 
 ## Features
 
-- **Data Collection**: Search for related research papers on a specific topic and store them in a time-series database.
+- **Data Collection**: Search for related research papers on a specific topic using the CrossRef API and store them in a time-series database.
 - **Summarization**: Summarize recent research contributions and generate new research ideas based on advancements from the past five years.
 - **Question Answering**: Respond to specific user queries about stored research papers, including questions on visual data like images and charts.
 - **Review Paper Generation**: Automatically compile a review paper summarizing key research points and suggesting future research directions.
@@ -27,9 +27,12 @@
 
 Research Nexus follows a modular architecture using multi-agent capabilities:
 
-1. **Search Agent**: Searches for relevant research papers based on user-specified topics.
-2. **Database Agent**: Queries stored research data in a time-series format for specific topics and years.
-3. **Q&A Agent**: Answers user questions related to specific papers, including visual elements.
+1. **Search Agent**: Searches for relevant research papers using the **CrossRef API** based on user-specified topics. This enables automatic fetching of metadata for academic research papers.
+   
+2. **Database Agent**: Queries stored research data in a time-series format for specific topics and years using **InfluxDB**.
+   
+3. **Q&A Agent**: Answers user questions related to specific papers, including visual elements such as charts and images.
+
 4. **Future Works Agent**: Generates ideas and creates a summary with future research directions.
 
 ![Project Architecture Diagram](architecture-diagram.png)
@@ -40,6 +43,17 @@ Research Nexus follows a modular architecture using multi-agent capabilities:
 - **Large Language Models**: Google Gemini API (for LLM tasks)
 - **Database**: InfluxDB for storing time-series data
 - **API Interaction**: FastAPI for seamless microservices communication
+- **Research Paper Search**: CrossRef API for searching academic papers based on a given topic
+
+## CrossRef API for Paper Search
+
+The **CrossRef API** is used in this project to search for academic papers by topic. The `Search Agent` uses this API to fetch relevant research papers and their metadata, such as titles, abstracts, and publication years. Here's an example query format:
+
+```python
+url = f"https://api.crossref.org/works?query={topic}&rows=50"
+```
+
+This query will retrieve up to 50 papers related to the specified `topic`. The CrossRef API is ideal for gathering academic articles and their metadata for the research assistant's database.
 
 ## Installation
 
@@ -56,10 +70,10 @@ Research Nexus follows a modular architecture using multi-agent capabilities:
    ```
 
 3. **Set Up Database**:
-   - Install and configure InfluxDB for time-series data storage.
+   - Install and configure **InfluxDB** for time-series data storage.
 
 4. **Environment Configuration**:
-   Update the `config.py` file with your Google Gemini API keys and InfluxDB credentials.
+   Update the `config.py` file with your **Google Gemini API** keys and **InfluxDB** credentials.
 
 ## Usage
 
