@@ -1,7 +1,3 @@
-Here's an updated version of your **Research Nexus** README, reflecting the use of InfluxDB for time-series data and Google Gemini API for LLM:
-
----
-
 # Research Nexus
 
 **Research Nexus** is an AI-powered academic research assistant application that utilizes Large Language Models (LLMs) through the Google Gemini API to assist researchers in searching, summarizing, and analyzing research papers. Built with an intuitive interface and backed by modular agents, **Research Nexus** allows users to efficiently generate summaries, answer questions, and suggest future research directions for a given topic.
@@ -35,7 +31,23 @@ Research Nexus follows a modular architecture using multi-agent capabilities:
 3. **Q&A Agent**: Answers user questions related to specific papers, including visual elements.
 4. **Future Works Agent**: Generates ideas and creates a summary with future research directions.
 
-![Project Architecture Diagram](link-to-your-architecture-diagram.png)
+
+Research_Nexus/
+├── main.py               # FastAPI backend
+├── frontend.py           # Streamlit frontend
+├── agents/
+│   ├── search_agent.py   # Search Agent for fetching papers
+│   ├── qna_agent.py      # Q&A Agent for summaries
+│   ├── future_work_agent.py # Future Works Agent for research ideas
+│   └── question_answer.py  # For handling chat interactions about research papers
+├── database/
+│   └── influxdb_client.py # InfluxDB client for storing and querying research papers
+├── config.py             # Configuration file (API keys, DB URLs, etc.)
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── LICENSE               # Project license (e.g., MIT)
+
+---
 
 ## Technologies Used
 
@@ -104,6 +116,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Thank you for using **Research Nexus**! Let’s redefine academic research together.
 
----
-
-This updated README now reflects the use of the **Google Gemini API** for LLM tasks and **InfluxDB** for time-series data. Feel free to customize further if needed!
