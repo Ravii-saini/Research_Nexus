@@ -1,5 +1,5 @@
 
-# Research Nexus
+# Research Nexus (Attention.AI)
 
 **Research Nexus** is an AI-powered academic research assistant application that utilizes Large Language Models (LLMs) through the Google Gemini API to assist researchers in searching, summarizing, and analyzing research papers. Built with an intuitive interface and backed by modular agents, **Research Nexus** allows users to efficiently generate summaries, answer questions, and suggest future research directions for a given topic.
 
