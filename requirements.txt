@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+streamlit
+influxdb-client
+google.generativeai        # Replace with other LLM libraries if necessary
