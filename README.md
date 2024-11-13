@@ -1,3 +1,4 @@
+
 # Research Nexus
 
 **Research Nexus** is an AI-powered academic research assistant application that utilizes Large Language Models (LLMs) through the Google Gemini API to assist researchers in searching, summarizing, and analyzing research papers. Built with an intuitive interface and backed by modular agents, **Research Nexus** allows users to efficiently generate summaries, answer questions, and suggest future research directions for a given topic.
@@ -31,23 +32,7 @@ Research Nexus follows a modular architecture using multi-agent capabilities:
 3. **Q&A Agent**: Answers user questions related to specific papers, including visual elements.
 4. **Future Works Agent**: Generates ideas and creates a summary with future research directions.
 
-
-Research_Nexus/
-├── main.py               # FastAPI backend
-├── frontend.py           # Streamlit frontend
-├── agents/
-│   ├── search_agent.py   # Search Agent for fetching papers
-│   ├── qna_agent.py      # Q&A Agent for summaries
-│   ├── future_work_agent.py # Future Works Agent for research ideas
-│   └── question_answer.py  # For handling chat interactions about research papers
-├── database/
-│   └── influxdb_client.py # InfluxDB client for storing and querying research papers
-├── config.py             # Configuration file (API keys, DB URLs, etc.)
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-└── LICENSE               # Project license (e.g., MIT)
-
----
+![Project Architecture Diagram](architecture-diagram.png)
 
 ## Technologies Used
 
